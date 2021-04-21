@@ -1,2 +1,9 @@
+{% extends "Layout.html" %}
+{% block content %}
 <h1>Hello World</h1>
-Hello {{ name }}
+
+{% for item in db %}
+<li class="pure-menu-item"><a href="{{ item }}" class="pure-menu-link">{{ item }}</a></li>
+{% endfor %}
+
+{% endblock %}
